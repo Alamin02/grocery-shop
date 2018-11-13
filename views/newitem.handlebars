@@ -1,0 +1,75 @@
+{{#if errors}}
+<div class = "col-sm-offset-2 col-sm-10">
+
+{{#each errors}}
+    <div class="alert alert-danger ">{{msg}}</div>
+    {{/each}}
+
+</div>
+{{/if}}
+<div class="container">
+  <h2 class = "headings" style="color: white">New Product</h2>
+  <form class="form-horizontal" action="/items/new" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="username" >Product Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="email" name="name" placeholder="Insert product name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="price">Price:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" type="number" name="price" placeholder="Insert product price">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="shopname">Shop:</label>
+      <div class="col-sm-10">          
+        <input class="form-control" type="number" name="shop" placeholder="Include shop number" min="1" max="4" required="required">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="quantity">Quantity :</label>
+      <div class="col-sm-10">          
+        <input class="form-control" type="number" name="quantity" placeholder="Include quantity of the product" required="required">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="category">
+                Category:</label>
+            <div class="col-sm-10"> 
+                <select id="category" name="category" class="form-control" required="required">
+                <option value="sports">Sports</option>
+                <option value="cloths">Cloths</option>
+                <option value="gift">Gift</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                            </select>
+            </div>
+      </div>
+
+
+
+                        <div class="form-group">
+                              <label class="control-label col-sm-2" for="category">
+                Description:</label>
+                                <div class="col-sm-10">
+                            <textarea name="details" id="details" class="form-control " rows="9" cols="25" required="required"
+                                placeholder="Product description..."></textarea>
+                                </div>
+                        </div>
+    <div class="form-group">    
+     <label class="control-label col-sm-2" for="category">
+                Insert Image:</label>    
+      <div class="col-sm-10">
+     
+      <input type="file" name="image" id="fileToUpload">
+      <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

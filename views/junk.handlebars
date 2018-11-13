@@ -1,0 +1,29 @@
+{{#if products}}
+
+<div class="col-md-6 ">
+<div class="panel panel-primary" style="float:left;">
+  <div class="panel-heading">Product Category: {{category}}</div>
+
+  <div class="panel-body">
+
+{{#each products}}
+    
+<div class="card" style="width: 20rem; float:left; padding-bottom:15px">
+  <img class="card-img-top" src="/photos/{{name}}.jpg" style="height : 80px; width : 100px" alt="{{name}}">
+  <div class="card-block">
+    <h4 class="card-title">{{name}}</h4>
+    <p class="card-text">Price :  {{price}}</p>
+    <a href="details?name={{name}}" class="btn btn-primary">See Details</a>
+  </div>
+</div>
+
+
+    {{/each}}
+
+</div>
+
+<div class="panel-footer">Click to see details</div>
+</div>
+</div>
+</div>
+{{/if}}

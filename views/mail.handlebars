@@ -1,0 +1,21 @@
+{{#if mails}}
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Our Products</div>
+  <div class="panel-body">
+
+{{#each mails}}
+<div>
+    <strong>{{name}} </strong> 
+    <p>Email :  {{email}}</p>
+    <p>Subject : {{subject}}</p>
+    <p>Message : {{message}}</p>
+    <br><br>
+</div>
+    
+{{/each}}
+
+</div>
+</div>
+
+{{/if}}

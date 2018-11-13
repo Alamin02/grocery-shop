@@ -1,0 +1,18 @@
+
+{{#if item}}
+<div class="panel panel-default">
+  <div class="panel-body">
+
+  <img src="/photos/{{item.name}}.jpg" style="height : 300px; width : auto" alt="{{name}}" />
+<p><strong>Name: </strong> {{item.name}}</p>
+<p><strong>Price: </strong>{{item.price}}</p>
+<p><strong>Available at: </strong>Shop {{item.shop}}</p>
+<p><strong>Category: </strong>{{item.category}}</p>
+<p><strong>Details: </strong> {{item.details}}</p>
+<p><strong>Available Stock: </strong> {{item.quantity}}</p>
+
+  </div>
+  <div class="panel-footer">Details for {{item.name}}</div>
+</div>
+
+{{/if}}

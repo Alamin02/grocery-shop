@@ -1,0 +1,31 @@
+{{#if success}}
+<div class = "col-sm-offset-2 col-sm-10">
+
+    <div class="alert alert-success ">{{success}}</div>
+
+</div>
+{{/if}}
+
+<div style="color: white">
+<h3 class = "headings">Welcome Boss </h3>
+<ul>
+<li><a href = "/items/new" style="color: white">Add New Item</a></li>
+<li><a href="/items/old" style="color: white">Manage Existing Item</a> 
+    <ul>
+      <li>
+         <a href = "/items/old?shop=1" style="color: white">Shop 1</a>
+      </li>
+      <li>
+         <a href = "/items/old?shop=2" style="color: white">Shop 2</a>
+      </li>
+      <li>
+         <a href = "/items/old?shop=3" style="color: white">Shop 3</a>
+      </li>
+      <li>
+         <a href = "/items/old?shop=4" style="color: white">Shop 4</a>
+      </li>
+    </ul>
+</li>
+<li><a href = "/admin/mail" style="color: white">Check mails</a></li>
+</ul>
+</div>

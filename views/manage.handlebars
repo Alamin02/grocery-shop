@@ -1,0 +1,38 @@
+{{#if products}}
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Manage Products</div>
+  <div class="panel-body">
+
+{{#each products}}
+<div id = "product" class="card" style="width: 20rem;">
+    <img class="card-img-top" src="/photos/{{name}}.jpg" style="height : 80px; width : 100px" alt="{{name}}" />
+    <br>
+
+ 
+    <strong>{{name}} </strong>  <p> Price :  {{price}}</p>
+
+       <div class="form-group">
+    <form action = "/items/delete" method = "post">
+        <input type="hidden" name="name" value= "{{name}}" />
+        <input type="submit" class="form-control" name="delete" value ="Delete" />
+    </form>
+
+    <form action = "/items/update" method = "post">
+       <label class="control-label" style="color:black;">Quantity:</label>
+        <input type="hidden" name="id" value= "{{_id}}" />
+        <input type="number" class="col-sm-12"  name="new_quantity" placeholder="{{quantity}}" required="required" />
+        <input type="submit" class="form-control" name="update" value ="update" />
+    </form>
+
+    </div>
+</div>
+    
+    {{/each}}
+</div>
+
+
+<div class="panel-footer">Products from Shop {{shop.shop}} </div>
+</div>
+
+{{/if}}
